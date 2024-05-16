@@ -1,0 +1,847 @@
+{
+	"info": {
+		"_postman_id": "8b13fe31-b9a5-4bc2-a950-aa26446e694f",
+		"name": "procom-kas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29749114"
+	},
+	"item": [
+		{
+			"name": "Month",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/month",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"month"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"year\": 2022,\r\n    \"month\": 4\r\n}   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/month",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"month"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"show\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/month?year=2000&month=1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"month"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2000"
+								},
+								{
+									"key": "month",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/month?month=1&year=2000",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"month"
+							],
+							"query": [
+								{
+									"key": "month",
+									"value": "1"
+								},
+								{
+									"key": "year",
+									"value": "2000"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "File",
+			"item": [
+				{
+					"name": "Get All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/file/images",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"file",
+								"images"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "files",
+									"type": "file",
+									"src": "/C:/Users/acer/Pictures/Acer/a.png",
+									"disabled": true
+								},
+								{
+									"key": "File",
+									"value": "tes",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/file/image/bhgbstkyypmualyffinjphoexqkhbuypegogobfk-a.png",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"file",
+								"image",
+								"bhgbstkyypmualyffinjphoexqkhbuypegogobfk-a.png"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "files",
+									"type": "file",
+									"src": "/C:/Users/acer/Pictures/Acer/a.png"
+								},
+								{
+									"key": "File",
+									"value": "tes",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/file/image/aickgrctlibriheojkudiiocizbcrmnublbnvgsx-a.png",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"file",
+								"image",
+								"aickgrctlibriheojkudiiocizbcrmnublbnvgsx-a.png"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/acer/Pictures/Acer/a.png",
+									"disabled": true
+								},
+								{
+									"key": "file",
+									"value": "awd",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/file/image",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"file",
+								"image"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"npm\": \"2125240015\",\r\n    \"name\": \"Fanes Pratama\",\r\n    \"email\": \"fanes23.pratama@mhs.mdp.ac.id\",\r\n    \"month_id\": 6\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/users?limit=2&page=1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "order_by",
+									"value": "asc",
+									"description": "asc|desc",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "created_at",
+									"description": "created_at|updated_at|name",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "2"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By NPM",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/users/details?npm=2125240021",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"details"
+							],
+							"query": [
+								{
+									"key": "npm",
+									"value": "2125240021"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"npm\": \"2125240026\",\r\n    \"name\": \"Y Fanes Pratama\",\r\n    \"email\": \"fanes23.pratama.h@mhs.mdp.ac.id\",\r\n    \"kas_payed\": 1,\r\n    \"month_start_pay\": {\r\n        \"id\": 73\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/users",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Fanes Pratama 2cc\",\r\n    \"email\": \"fanes23.pratama.hxsc@mhs.mdp.ac.id\",\r\n    \"kas_payed\": 20,\r\n    \"month_start_pay\": {\r\n        \"id\": 73\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/users?npm=2125240021",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "npm",
+									"value": "2125240021"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/users?npm=2125240017",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "npm",
+									"value": "2125240017"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Kas Submission",
+			"item": [
+				{
+					"name": "Get All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/kas?limit=1&page=1&order_by=asc&sort=created_at",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"kas"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "1"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "order_by",
+									"value": "asc",
+									"description": "asc|desc"
+								},
+								{
+									"key": "sort",
+									"value": "created_at",
+									"description": "created_at|updated_at|name"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"submission_id\": \"12345\"\r\n    // \"SubmissionId\": \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/kas/details?submission_id=rxktm",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"kas",
+								"details"
+							],
+							"query": [
+								{
+									"key": "submission_id",
+									"value": "rxktm"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\": {\r\n        \"npm\": \"2125240021\"\r\n    },\r\n    \"payed_amount\": 10000,\r\n    \"note\": \"-\",\r\n    \"evidence\": \"cfmeqjczytlntcijxgwrzqwxsvwqrmvcmtimsixo-a.png\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/kas",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"kas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Status",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/kas?submission_id=ihrtb",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"kas"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "submission_id",
+									"value": "ihrtb"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Balance",
+			"item": [
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/balance",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"balance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\": {\r\n        \"npm\": \"2125240021\"\r\n    },\r\n    \"amount\": 5000,\r\n    \"activity\": 1,\r\n    \"note\": \"ccc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/balance",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"balance"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Balance History",
+			"item": [
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/balance/history?limit=1&page=1&order_by=desc&sort=created_at",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"balance",
+								"history"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "1"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "order_by",
+									"value": "desc",
+									"description": "asc|desc"
+								},
+								{
+									"key": "sort",
+									"value": "created_at",
+									"description": "created_at|updated_at|name"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Financial Request",
+			"item": [
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/financial-request",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"financial-request"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "3",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "order_by",
+									"value": "asc",
+									"description": "asc|desc",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "name",
+									"description": "created_at|updated_at|name",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/financial-request/details?request_id=qwbvi",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"financial-request",
+								"details"
+							],
+							"query": [
+								{
+									"key": "request_id",
+									"value": "qwbvi"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 2000,\r\n    \"note\": \"beli pena\",\r\n    \"user\": {\r\n        \"npm\": \"2125240025\"\r\n    },\r\n    \"payment\": {\r\n        \"type\": \"transfer\",\r\n        \"target_provider\": \"BCA\",\r\n        \"target _name\": \"Fanes Pratama\",\r\n        \"target_number\": \"12345678\",\r\n        \"evidence\": \"evidence.png\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/financial-request",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"financial-request"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Status",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": 1,\r\n    \"transfered_evidence\": \"transfered_evidence.png\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/financial-request?request_id=evant",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"financial-request"
+							],
+							"query": [
+								{
+									"key": "request_id",
+									"value": "evant"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,33 @@
+{
+	"id": "4027f004-3380-4194-ac59-d3ef109e6251",
+	"name": "procom-kas",
+	"values": [
+		{
+			"key": "protocol",
+			"value": "http",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "host",
+			"value": "127.0.0.1",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "port",
+			"value": "5000",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "baseURL",
+			"value": "{{protocol}}://{{host}}:{{port}}",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2024-05-16T15:45:23.923Z",
+	"_postman_exported_using": "Postman/11.1.2"
+}
