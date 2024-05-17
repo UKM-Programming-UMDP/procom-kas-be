@@ -10,5 +10,5 @@ func main() {
 	router := config_router.InitRouter()
 	config_router.InitRoutes(router, db)
 
-	router.Run("localhost:5000")
+	router.Run("0.0.0.0:5000")
 }

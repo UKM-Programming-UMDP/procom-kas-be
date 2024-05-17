@@ -19,5 +19,8 @@ test-prod:
 build:
 	go build -o ./dist/app
 
-start:
+start-win:
 	dist/app/backend.exe
+
+start-linux:
+	./dist/app
