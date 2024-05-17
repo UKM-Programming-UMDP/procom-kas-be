@@ -24,3 +24,7 @@ start-win:
 
 start-linux:
 	./dist/app
+
+deploy:
+	go build -o ./dist/app
+	./dist/app
