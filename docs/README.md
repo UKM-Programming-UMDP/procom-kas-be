@@ -41,8 +41,8 @@ This is documentation related to the request and response formats as well as the
     "message": "Invalid request body",      // string
     "errors": [                             // array | null
       {
-        "Field": "year",                    // string
-        "Msg": "This field is required"     // string
+        "field": "year",                    // string
+        "message": "This field is required"     // string
       }
     ]
   }

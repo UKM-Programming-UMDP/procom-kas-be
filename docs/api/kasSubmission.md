@@ -15,7 +15,7 @@ This endpoint used to do CRUD on submitted kas payment.
 - ### Get All Kas Submission
   - Method: `GET`
   - URI: `/api/kas`
-  - Filter: [sort by date](../README.md/#filter-by-parameter)
+  - Filter: [sort by date](../README.md/#filter-by-parameter), [pagination](../README.md/#pagination)
 
   Response:
   ```json
