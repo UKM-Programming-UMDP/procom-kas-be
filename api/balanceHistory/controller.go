@@ -44,6 +44,7 @@ type HistoryContext struct {
 	PrevBalance int
 	Note        string
 	UserNPM     string
+	UserName    string
 	Activity    Activity
 }
 
@@ -54,6 +55,7 @@ func AddHistory(historyContext HistoryContext) bool {
 		Activity:    historyContext.Activity,
 		Note:        historyContext.Note,
 		UserNPM:     historyContext.UserNPM,
+		UserName:    historyContext.UserName,
 	}
 
 	queryAddHistory := historyContext.Db.Create(&history)
@@ -83,9 +85,11 @@ func balanceResFormatter(balance BalanceHistorySchema) BalanceHistoryResponse {
 		Activity:    balance.Activity,
 		Note:        balance.Note,
 		User: struct {
-			NPM string `json:"npm,omitempty"`
+			NPM  string `json:"npm,omitempty"`
+			Name string `json:"name,omitempty"`
 		}{
-			NPM: balance.UserNPM,
+			NPM:  balance.UserNPM,
+			Name: balance.UserName,
 		},
 		CreatedAt: balance.CreatedAt,
 	}

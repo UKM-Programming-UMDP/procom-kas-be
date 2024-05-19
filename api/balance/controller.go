@@ -70,6 +70,7 @@ func (a *Controller) UpdateBalance(c *gin.Context) {
 		PrevBalance: balance.Balance,
 		Note:        reqBody.Note,
 		UserNPM:     reqBody.User.NPM,
+		UserName:    reqBody.User.Name,
 		Activity:    activity,
 	}
 	if err := balanceHistory.AddHistory(historyContext); err {
