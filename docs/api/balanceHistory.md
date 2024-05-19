@@ -26,7 +26,8 @@ This endpoint used to get all of history when there is changes on balance.
         "activity": "Add",
         "note": "[kas pay]",
         "user": {
-          "npm": "2125240021"
+          "npm": "2125240015",
+          "name": "Fanes Pratama"
         },
         "created_at": "2024-05-12T10:09:37.88331+08:00"
       }
