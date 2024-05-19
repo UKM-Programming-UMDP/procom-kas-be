@@ -18,6 +18,7 @@ type BalanceHistorySchema struct {
 	Activity    Activity `gorm:"not null"`
 	Note        string   `gorm:"not null"`
 	UserNPM     string   `gorm:"not null"`
+	UserName    string
 	CreatedAt   time.Time
 	UpdatedAt   time.Time
 }
@@ -38,7 +39,8 @@ type BalanceHistoryResponse struct {
 	Activity    Activity `json:"activity,omitempty"`
 	Note        string   `json:"note,omitempty"`
 	User        struct {
-		NPM string `json:"npm,omitempty"`
+		NPM  string `json:"npm,omitempty"`
+		Name string `json:"name,omitempty"`
 	} `json:"user,omitempty"`
 	CreatedAt time.Time `json:"created_at,omitempty"`
 }

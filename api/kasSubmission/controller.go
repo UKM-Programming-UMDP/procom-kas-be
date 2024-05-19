@@ -145,6 +145,7 @@ func (a *Controller) UpdateKasSubmissionStatus(c *gin.Context) {
 			Amount:      kasSubmission.PayedAmount,
 			Note:        "[kas pay]",
 			UserNPM:     kasSubmission.User.NPM,
+			UserName:    kasSubmission.User.Name,
 			Activity:    balanceHistory.Add,
 		}
 		if err := balanceHistory.AddHistory(historyContext); err {

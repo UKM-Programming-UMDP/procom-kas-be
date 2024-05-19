@@ -152,6 +152,7 @@ func (a *Controller) UpdateFinancialRequestStatus(c *gin.Context) {
 			Amount:      finReq.Amount,
 			Note:        "[finreq] " + finReq.Note,
 			UserNPM:     finReq.UserNPM,
+			UserName:    finReq.User.Name,
 			Activity:    balanceHistory.Substract,
 		}
 		if err := balanceHistory.AddHistory(historyContext); err {
