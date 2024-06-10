@@ -18,8 +18,11 @@ go mod tidy
 
 ### Database
 
-- Run postgres using docker
-- Create a database named `procom_kas`
+This project using PostgreSQL as database. There is two options for you to host it:
+1. Using docker, simply host it by download an official postgres image, and run it. But the mines is it consume a lot of RAM (you need at least 16 GB of RAM)
+2. Using WSL2, this is quite complicate for the setup, but it's cost a lot less ram (you can run in on laptop with 8 GB RAM). Google for tutorial, or contact backend developer.
+
+Note: Make sure to create the database after host the postgres, and update the .env files
 
 ### Environment variables
 
