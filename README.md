@@ -46,13 +46,12 @@ sudo systemctl start postgresql
 4. Create postgres user
 ```bash
 sudo -u postgres psql
-CREATE USER username WITH PASSWORD 'secret';
-ALTER USER username CREATEDB;
+ALTER USER postgres PASSWORD 'secret';
 CREATE DATABASE procom_kas;
 ```
-Note: replace username and 'secret' with your preferences, this will be put to your .env
+Note: replace 'secret' with your preferences, this will be put to your .env
 
-5. Update Your .env files with username and password that you create
+5. Update Your .env files with username and password that you create, since the username is 'postgres', you only need update the password
 
 ### Environment variables
 
