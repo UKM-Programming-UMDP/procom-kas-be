@@ -22,7 +22,37 @@ This project using PostgreSQL as database. There is two options for you to host 
 1. Using docker, simply host it by download an official postgres image, and run it. But the mines is it consume a lot of RAM (you need at least 16 GB of RAM)
 2. Using WSL2, this is quite complicate for the setup, but it's cost a lot less ram (you can run in on laptop with 8 GB RAM). Google for tutorial, or contact backend developer.
 
-Note: Make sure to create the database after host the postgres, and update the .env files
+#### Step by Step Using WSL2
+1. Install Ubuntu to your wsl
+```bash
+wsl --install
+wsl --set-default Ubuntu
+```
+Note: after install, you need to input username and password, that's for root user of your linux
+
+2. Install postgresql
+```bash
+sudo apt update
+sudo apt install postgresql postgresql-contrib
+```
+
+3. Start postgresql
+```bash
+sudo systemctl status postgresql
+sudo systemctl start postgresql
+# make sure it's active when check the status
+```
+
+4. Create postgres user
+```bash
+sudo -u postgres psql
+CREATE USER username WITH PASSWORD 'secret';
+ALTER USER username CREATEDB;
+CREATE DATABASE procom_kas;
+```
+Note: replace username and 'secret' with your preferences, this will be put to your .env
+
+5. Update Your .env files with username and password that you create
 
 ### Environment variables
 
