@@ -13,14 +13,14 @@ This is documentation related to the request and response formats as well as the
   - [Sort by Name](#sort-by-name)
 - Pagination
   - [Pagination](#pagination)
-- Endpoint
-  - [Balance](./api/balance.md)
-  - [Balance History](./api/balanceHistory.md)
-  - [User](./api/user.md)
-  - [Kas Submission](./api/kasSubmission.md)
-  - [Financial Request](./api/financialRequest.md)
-  - [Month](./api/month.md)
-  - [File Upload](./api/fileUpload.md)
+- Endpoint (use postman)
+  - Balance
+  - Balance History
+  - User
+  - Kas Submission
+  - Financial Request
+  - Month
+  - File Upload
 
 ## Base API Response
 - #### **On Success**

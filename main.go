@@ -1,14 +1,24 @@
 package main
 
 import (
-	config_database "backend/config/database"
-	config_router "backend/config/router"
+	"backend/app/common/utils"
+	"backend/app/config/database"
+	"backend/app/config/mailer"
+	"backend/app/config/other"
+	"backend/app/config/router"
 )
 
 func main() {
-	db := config_database.InitDB()
-	router := config_router.InitRouter()
-	config_router.InitRoutes(router, db)
+	utils.LoadEnv(".env")
 
-	router.Run("0.0.0.0:5000")
+	other.InitUploadFolder()
+	database.InitializeDB()
+	router.InitializeRouter()
+	router.InitializeRoutes()
+	mailer.InitializeMailer()
+
+	routerInstance := router.GetRouterInstance()
+	routerInstance.Run(
+		utils.GetEnv("BE_HOST") + ":" + utils.GetEnv("BE_PORT"),
+	)
 }
