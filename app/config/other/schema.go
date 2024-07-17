@@ -7,12 +7,8 @@ import (
 )
 
 func InitDatabaseSchema(db *gorm.DB) {
-	schemaNames := []string{"development", "production"}
-	for _, schemaName := range schemaNames {
-		if err := CreateSchema(db, schemaName); err != nil {
-			fmt.Printf("Error creating schema %s: %v\n", schemaName, err)
-		}
-	}
+	CreateSchema(db, "development")
+	CreateSchema(db, "production")
 }
 
 func CreateSchema(db *gorm.DB, schemaName string) error {
