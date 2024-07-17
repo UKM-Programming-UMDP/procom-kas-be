@@ -7,6 +7,7 @@ import (
 	"backend/app/api/kassubmission"
 	"backend/app/api/month"
 	"backend/app/api/user"
+	"backend/app/config/other"
 
 	"gorm.io/gorm"
 )
@@ -28,6 +29,8 @@ var modelList = []interface{}{
 }
 
 func Migrate(db *gorm.DB) error {
+	other.InitDatabaseSchema(db)
+
 	for _, model := range modelList {
 		if err := db.AutoMigrate(model); err != nil {
 			panic(err)

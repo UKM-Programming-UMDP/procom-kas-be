@@ -10,7 +10,7 @@ import (
 type Balance struct {
 	ID      int `gorm:"primaryKey;autoIncrement" json:"id" validate:"required"`
 	Balance int `gorm:"not null"`
-	models.Timestamps
+	models.TimestampsSoftDelete
 }
 
 type BalanceHistory struct {
