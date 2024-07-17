@@ -1,0 +1,3394 @@
+{
+	"info": {
+		"_postman_id": "8b13fe31-b9a5-4bc2-a950-aa26446e694f",
+		"name": "procom-kas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29749114"
+	},
+	"item": [
+		{
+			"name": "Balance",
+			"item": [
+				{
+					"name": "History",
+					"item": [
+						{
+							"name": "Get",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/v1/balance/history",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"balance",
+										"history"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "order_by",
+											"value": "desc",
+											"description": "asc|desc",
+											"disabled": true
+										},
+										{
+											"key": "sort",
+											"value": "created_at",
+											"description": "created_at|updated_at",
+											"disabled": true
+										},
+										{
+											"key": "name",
+											"value": "fanes",
+											"description": "user name",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseURL}}/v1/balance/history",
+											"host": [
+												"{{baseURL}}"
+											],
+											"path": [
+												"v1",
+												"balance",
+												"history"
+											],
+											"query": [
+												{
+													"key": "limit",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "page",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "order_by",
+													"value": "desc",
+													"description": "asc|desc",
+													"disabled": true
+												},
+												{
+													"key": "sort",
+													"value": "created_at",
+													"description": "created_at|updated_at|name",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 13 Jul 2024 07:37:11 GMT"
+										},
+										{
+											"key": "Content-Length",
+											"value": "691"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": true,\n    \"status_code\": 200,\n    \"message\": \"Success getting histories\",\n    \"data\": [\n        {\n            \"amount\": 10000,\n            \"prev_balance\": 40000,\n            \"activity\": \"Add\",\n            \"note\": \"bayar kas\",\n            \"user\": {\n                \"npm\": \"2125240015\",\n                \"name\": \"Fanes Pratama-edit\"\n            },\n            \"created_at\": \"2024-07-13T14:36:12.053779+07:00\"\n        },\n        {\n            \"amount\": 3000,\n            \"prev_balance\": 34000,\n            \"activity\": \"Subtract\",\n            \"note\": \"beli pena\",\n            \"user\": {\n                \"npm\": \"2125240015\",\n                \"name\": \"Fanes Pratama-edit\"\n            },\n            \"created_at\": \"2024-07-13T14:36:32.89575+07:00\"\n        },\n        {\n            \"amount\": 10000,\n            \"prev_balance\": 24000,\n            \"activity\": \"Subtract\",\n            \"note\": \"beli mobile\",\n            \"user\": {\n                \"npm\": \"2125240015\",\n                \"name\": \"Fanes Pratama-edit\"\n            },\n            \"created_at\": \"2024-07-13T14:36:38.961147+07:00\"\n        }\n    ],\n    \"pagination\": {\n        \"page\": 1,\n        \"limit\": 10,\n        \"total_items\": 3,\n        \"total_pages\": 1\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/v1/balance",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"balance"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/v1/balance",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"balance"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 07:25:43 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "140"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"status_code\": 200,\n    \"message\": \"Success getting a balance\",\n    \"data\": {\n        \"balance\": 0,\n        \"updated_at\": \"2024-07-13T14:25:09.707644+07:00\"\n    }\n}"
+						},
+						{
+							"name": "Not Initialized yet",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/v1/balance",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"balance"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 07:08:32 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "88"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"status_code\": 500,\n    \"message\": \"Balance not initialized yet\",\n    \"errors\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\": {\r\n        \"npm\": \"2125240015\"\r\n    },\r\n    \"amount\": 5000,\r\n    \"activity\": 2, // 1 = add | 2 = subtract\r\n    \"note\": \"beli pena\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/v1/balance",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"balance"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user\": {\r\n        \"npm\": \"2125240015\"\r\n    },\r\n    \"amount\": 5000,\r\n    \"activity\": 1,\r\n    \"note\": \"beli pena\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/v1/balance",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"balance"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 07:28:35 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "144"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"status_code\": 200,\n    \"message\": \"Success updating balance\",\n    \"data\": {\n        \"balance\": 10000,\n        \"updated_at\": \"2024-07-13T14:28:35.2209375+07:00\"\n    }\n}"
+						},
+						{
+							"name": "User Not Found",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user\": {\r\n        \"npm\": \"2125240014\"\r\n    },\r\n    \"amount\": 5000,\r\n    \"activity\": 1,\r\n    \"note\": \"ccc\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/v1/balance",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"balance"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 07:28:16 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "75"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"status_code\": 400,\n    \"message\": \"User not found\",\n    \"errors\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Month",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/v1/months",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"months"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/v1/months",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"months"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 03:42:34 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "254"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"status_code\": 200,\n    \"message\": \"Success getting a month\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"year\": 2022,\n            \"month\": 4,\n            \"show\": false\n        },\n        {\n            \"id\": 2,\n            \"year\": 2022,\n            \"month\": 5,\n            \"show\": false\n        },\n        {\n            \"id\": 3,\n            \"year\": 2022,\n            \"month\": 6,\n            \"show\": false\n        },\n        {\n            \"id\": 4,\n            \"year\": 2022,\n            \"month\": 7,\n            \"show\": false\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"year\": 2022,\r\n    \"month\": 9\r\n}   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/v1/months",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"months"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"year\": 2022,\r\n    \"month\": 8\r\n}   ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/v1/months",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"months"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 03:42:49 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "121"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"status_code\": 201,\n    \"message\": \"Success creating a month\",\n    \"data\": {\n        \"id\": 5,\n        \"year\": 2022,\n        \"month\": 8,\n        \"show\": false\n    }\n}"
+						},
+						{
+							"name": "Duplicate",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"year\": 2022,\r\n    \"month\": 8\r\n}   ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/v1/months",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"months"
+									]
+								}
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 03:43:00 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "95"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"status_code\": 409,\n    \"message\": \"Month already exists for that year\",\n    \"errors\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"show\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/v1/months/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"months",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"show\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/v1/months/:id",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"months",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 03:55:00 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "123"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"status_code\": 200,\n    \"message\": \"Success updating show month\",\n    \"data\": {\n        \"id\": 1,\n        \"year\": 2022,\n        \"month\": 4,\n        \"show\": true\n    }\n}"
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"show\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/v1/months/:id",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"months",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 04:03:59 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "94"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"status_code\": 404,\n    \"message\": \"Month not found or registered yet\",\n    \"errors\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/v1/months/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"months",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/v1/months/:id",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"months",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 04:03:06 GMT"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/v1/months/:id",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"months",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 04:03:35 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "94"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"status_code\": 404,\n    \"message\": \"Month not found or registered yet\",\n    \"errors\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"npm\": \"2125240015\",\r\n    \"name\": \"Fanes Pratama\",\r\n    \"email\": \"fanes23.pratama@mhs.mdp.ac.id\",\r\n    \"month_id\": 6\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/v1/users",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"users"
+							],
+							"query": [
+								{
+									"key": "order_by",
+									"value": "asc",
+									"description": "asc|desc",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "created_at",
+									"description": "created_at|updated_at|name",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "2",
+									"description": "default is 10",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"description": "pagination page",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "megumin",
+									"description": "user name",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"npm\": \"2125240015\",\r\n    \"name\": \"Fanes Pratama\",\r\n    \"email\": \"fanes23.pratama@mhs.mdp.ac.id\",\r\n    \"month_id\": 6\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/v1/users",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"users"
+									],
+									"query": [
+										{
+											"key": "order_by",
+											"value": "asc",
+											"description": "asc|desc",
+											"disabled": true
+										},
+										{
+											"key": "sort",
+											"value": "created_at",
+											"description": "created_at|updated_at|name",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "2",
+											"description": "default is 10",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"description": "pagination page",
+											"disabled": true
+										},
+										{
+											"key": "name",
+											"value": "megumin",
+											"description": "user name",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 06:11:43 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "508"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"status_code\": 200,\n    \"message\": \"Success getting users\",\n    \"data\": [\n        {\n            \"npm\": \"2125240026\",\n            \"name\": \"Y Fanes Pratama\",\n            \"email\": \"fanes23.pratama.h@mhs.mdp.ac.id\",\n            \"kas_payed\": 1,\n            \"month_start_pay\": {\n                \"id\": 1\n            }\n        },\n        {\n            \"npm\": \"2125240015\",\n            \"name\": \"Fanes Pratama\",\n            \"email\": \"fanes23.pratama@mhs.mdp.ac.id\",\n            \"kas_payed\": 1,\n            \"month_start_pay\": {\n                \"id\": 1\n            }\n        },\n        {\n            \"npm\": \"2125240016\",\n            \"name\": \"Megumin\",\n            \"email\": \"megumin@mhs.mdp.ac.id\",\n            \"kas_payed\": 1,\n            \"month_start_pay\": {\n                \"id\": 1\n            }\n        }\n    ],\n    \"pagination\": {\n        \"page\": 1,\n        \"limit\": 10,\n        \"total_items\": 3,\n        \"total_pages\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get By NPM",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/v1/users/:npm",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"users",
+								":npm"
+							],
+							"variable": [
+								{
+									"key": "npm",
+									"value": "2125240015"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/v1/users/:npm",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"users",
+										":npm"
+									],
+									"variable": [
+										{
+											"key": "npm",
+											"value": "2125240015"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 06:12:11 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "198"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"status_code\": 200,\n    \"message\": \"Success getting user\",\n    \"data\": {\n        \"npm\": \"2125240015\",\n        \"name\": \"Fanes Pratama\",\n        \"email\": \"fanes23.pratama@mhs.mdp.ac.id\",\n        \"kas_payed\": 1,\n        \"month_start_pay\": {\n            \"id\": 1\n        }\n    }\n}"
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/v1/users/:npm",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"users",
+										":npm"
+									],
+									"variable": [
+										{
+											"key": "npm",
+											"value": "2125240014"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 06:14:07 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "75"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"status_code\": 404,\n    \"message\": \"User not found\",\n    \"errors\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"npm\": \"2125240015\",\r\n    \"name\": \"Fanes Pratama\",\r\n    \"email\": \"fanes23.pratama@mhs.mdp.ac.id\",\r\n    \"kas_payed\": 1,\r\n    \"month_start_pay\": {\r\n        \"id\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/v1/users",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"npm\": \"2125240015\",\r\n    \"name\": \"Fanes Pratama\",\r\n    \"email\": \"fanes23.pratama@mhs.mdp.ac.id\",\r\n    \"kas_payed\": 1,\r\n    \"month_start_pay\": {\r\n        \"id\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/v1/users",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"users"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 06:04:32 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "199"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"status_code\": 201,\n    \"message\": \"Success creating user\",\n    \"data\": {\n        \"npm\": \"2125240015\",\n        \"name\": \"Fanes Pratama\",\n        \"email\": \"fanes23.pratama@mhs.mdp.ac.id\",\n        \"kas_payed\": 1,\n        \"month_start_pay\": {\n            \"id\": 1\n        }\n    }\n}"
+						},
+						{
+							"name": "NPM Exists",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"npm\": \"2125240015\",\r\n    \"name\": \"Fanes Pratama2\",\r\n    \"email\": \"fanes23.pratama2@mhs.mdp.ac.id\",\r\n    \"kas_payed\": 1,\r\n    \"month_start_pay\": {\r\n        \"id\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/v1/users",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"users"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 06:13:11 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "79"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"status_code\": 400,\n    \"message\": \"NPM already exists\",\n    \"errors\": null\n}"
+						},
+						{
+							"name": "Email Exists",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"npm\": \"2125240017\",\r\n    \"name\": \"Fanes Pratama2\",\r\n    \"email\": \"fanes23.pratama@mhs.mdp.ac.id\",\r\n    \"kas_payed\": 1,\r\n    \"month_start_pay\": {\r\n        \"id\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/v1/users",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"users"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 06:13:39 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "81"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"status_code\": 400,\n    \"message\": \"Email already exists\",\n    \"errors\": null\n}"
+						},
+						{
+							"name": "Month Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"npm\": \"2125240017\",\r\n    \"name\": \"Fanes Pratama2\",\r\n    \"email\": \"fanes23.pratama2@mhs.mdp.ac.id\",\r\n    \"kas_payed\": 1,\r\n    \"month_start_pay\": {\r\n        \"id\": 6969\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/v1/users",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"users"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 06:13:51 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "76"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"status_code\": 400,\n    \"message\": \"Month not found\",\n    \"errors\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Fanes Pratama-edit\",\r\n    \"email\": \"fanes23.pratama@mhs.mdp.ac.id\",\r\n    \"kas_payed\": 20,\r\n    \"month_start_pay\": {\r\n        \"id\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/v1/users/:npm",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"users",
+								":npm"
+							],
+							"variable": [
+								{
+									"key": "npm",
+									"value": "2125240015"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Fanes Pratama-edit\",\r\n    \"email\": \"fanes23.pratama@mhs.mdp.ac.id\",\r\n    \"kas_payed\": 20,\r\n    \"month_start_pay\": {\r\n        \"id\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/v1/users/:npm",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"users",
+										":npm"
+									],
+									"variable": [
+										{
+											"key": "npm",
+											"value": "2125240015"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 06:15:42 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "205"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"status_code\": 200,\n    \"message\": \"Success updating user\",\n    \"data\": {\n        \"npm\": \"2125240015\",\n        \"name\": \"Fanes Pratama-edit\",\n        \"email\": \"fanes23.pratama@mhs.mdp.ac.id\",\n        \"kas_payed\": 20,\n        \"month_start_pay\": {\n            \"id\": 1\n        }\n    }\n}"
+						},
+						{
+							"name": "User Not Found",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Fanes Pratama-edit\",\r\n    \"email\": \"fanes23.pratama@mhs.mdp.ac.id\",\r\n    \"kas_payed\": 20,\r\n    \"month_start_pay\": {\r\n        \"id\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/v1/users/:npm",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"users",
+										":npm"
+									],
+									"variable": [
+										{
+											"key": "npm",
+											"value": "2125240014"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 06:17:58 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "75"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"status_code\": 400,\n    \"message\": \"User not found\",\n    \"errors\": null\n}"
+						},
+						{
+							"name": "Month Not Found",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Fanes Pratama-edit\",\r\n    \"email\": \"fanes23.pratama@mhs.mdp.ac.id\",\r\n    \"kas_payed\": 20,\r\n    \"month_start_pay\": {\r\n        \"id\": 73\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/v1/users/:npm",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"users",
+										":npm"
+									],
+									"variable": [
+										{
+											"key": "npm",
+											"value": "2125240015"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 06:12:50 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "76"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"status_code\": 400,\n    \"message\": \"Month not found\",\n    \"errors\": null\n}"
+						},
+						{
+							"name": "Email Exists",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Fanes Pratama-edit\",\r\n    \"email\": \"fanes23.pratama.h@mhs.mdp.ac.id\",\r\n    \"kas_payed\": 20,\r\n    \"month_start_pay\": {\r\n        \"id\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/v1/users/:npm",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"users",
+										":npm"
+									],
+									"variable": [
+										{
+											"key": "npm",
+											"value": "2125240015"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 06:16:49 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "81"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"status_code\": 400,\n    \"message\": \"Email already exists\",\n    \"errors\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/v1/users/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2125240026"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/v1/users/:id",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"users",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "2125240026"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 06:25:23 GMT"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/v1/users/:id",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"users",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "2125240025"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 06:25:11 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "75"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"status_code\": 404,\n    \"message\": \"User not found\",\n    \"errors\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "File",
+			"item": [
+				{
+					"name": "Get All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseURL}}/v1/file/images",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"file",
+								"images"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{baseURL}}/v1/file/images",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"file",
+										"images"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 13:58:44 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "148"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"status_code\": 200,\n    \"message\": \"Success get all images\",\n    \"data\": [\n        {\n            \"url_id\": \"czfxascrsztnulptmkhocnuutzfealxcjfumflrx-a.png\",\n            \"name\": \"a\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "files",
+									"type": "file",
+									"src": "/C:/Users/acer/Pictures/Acer/a.png",
+									"disabled": true
+								},
+								{
+									"key": "File",
+									"value": "tes",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/v1/file/images/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"file",
+								"images",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "czfxascrsztnulptmkhocnuutzfealxcjfumflrx-a.png"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Fanes/Pictures/Dev/a.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/v1/file/images",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"file",
+								"images"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/Users/Fanes/Pictures/Dev/a.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseURL}}/v1/file/images",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"file",
+										"images"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 13:58:24 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "139"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"status_code\": 201,\n    \"message\": \"Success uploading an image\",\n    \"data\": {\n        \"url_id\": \"czfxascrsztnulptmkhocnuutzfealxcjfumflrx-a.png\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "files",
+									"type": "file",
+									"src": "/C:/Users/acer/Pictures/Acer/a.png"
+								},
+								{
+									"key": "File",
+									"value": "tes",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/v1/file/images/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"file",
+								"images",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "czfxascrsztnulptmkhocnuutzfealxcjfumflrx-a.png"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/C:/Users/acer/Pictures/Acer/a.png"
+										},
+										{
+											"key": "File",
+											"value": "tes",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseURL}}/v1/file/images/:id",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"file",
+										"images",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "czfxascrsztnulptmkhocnuutzfealxcjfumflrx-a.png"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 14:01:30 GMT"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/C:/Users/acer/Pictures/Acer/a.png"
+										},
+										{
+											"key": "File",
+											"value": "tes",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseURL}}/v1/file/images/:id",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"file",
+										"images",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "czfxascrsztnulptmkhocnuutzfealxcjfumflrx-a.png"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 14:01:37 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "76"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"status_code\": 404,\n    \"message\": \"Image not found\",\n    \"errors\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Kas Submission",
+			"item": [
+				{
+					"name": "Get All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/v1/kas-submissions",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"kas-submissions"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "order_by",
+									"value": "asc",
+									"description": "asc|desc",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "created_at",
+									"description": "created_at|updated_at",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"description": "1 = approved|2 = rejected|3 = pending",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/v1/kas-submissions",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"kas-submissions"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "order_by",
+											"value": "asc",
+											"description": "asc|desc",
+											"disabled": true
+										},
+										{
+											"key": "sort",
+											"value": "created_at",
+											"description": "created_at|updated_at",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 15:11:27 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1956"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"status_code\": 200,\n    \"message\": \"Success getting kas submissions\",\n    \"data\": [\n        {\n            \"submission_id\": \"OPXWY\",\n            \"user\": {\n                \"npm\": \"2125240015\",\n                \"name\": \"Fanes Pratama\",\n                \"email\": \"fanes23.pratama@mhs.mdp.ac.id\",\n                \"kas_payed\": 10001\n            },\n            \"payed_amount\": 10000,\n            \"status\": {\n                \"ID\": 3,\n                \"Name\": \"Pending\"\n            },\n            \"note\": \"-\",\n            \"evidence\": \"cfmeqjczytlntcijxgwrzqwxsvwqrmvcmtimsixo-a.png\",\n            \"submitted_at\": \"2024-07-13T21:32:39.582974+07:00\",\n            \"updated_at\": \"2024-07-13T21:32:39.582974+07:00\"\n        },\n        {\n            \"submission_id\": \"BSSYB\",\n            \"user\": {\n                \"npm\": \"2125240015\",\n                \"name\": \"Fanes Pratama\",\n                \"email\": \"fanes23.pratama@mhs.mdp.ac.id\",\n                \"kas_payed\": 10001\n            },\n            \"payed_amount\": 10000,\n            \"status\": {\n                \"ID\": 1,\n                \"Name\": \"Approved\"\n            },\n            \"note\": \"-\",\n            \"evidence\": \"cfmeqjczytlntcijxgwrzqwxsvwqrmvcmtimsixo-a.png\",\n            \"submitted_at\": \"2024-07-13T21:47:47.782625+07:00\",\n            \"updated_at\": \"2024-07-13T21:52:44.671557+07:00\"\n        },\n        {\n            \"submission_id\": \"LFUDK\",\n            \"user\": {\n                \"npm\": \"2125240015\",\n                \"name\": \"Fanes Pratama\",\n                \"email\": \"fanes23.pratama@mhs.mdp.ac.id\",\n                \"kas_payed\": 10001\n            },\n            \"payed_amount\": 10000,\n            \"status\": {\n                \"ID\": 2,\n                \"Name\": \"Rejected\"\n            },\n            \"note\": \"-\",\n            \"evidence\": \"cfmeqjczytlntcijxgwrzqwxsvwqrmvcmtimsixo-a.png\",\n            \"submitted_at\": \"2024-07-13T21:55:16.069561+07:00\",\n            \"updated_at\": \"2024-07-13T21:56:25.853805+07:00\"\n        },\n        {\n            \"submission_id\": \"XGNBP\",\n            \"user\": {\n                \"npm\": \"2125240015\",\n                \"name\": \"Fanes Pratama\",\n                \"email\": \"fanes23.pratama@mhs.mdp.ac.id\",\n                \"kas_payed\": 10001\n            },\n            \"payed_amount\": 10000,\n            \"status\": {\n                \"ID\": 1,\n                \"Name\": \"Approved\"\n            },\n            \"note\": \"-\",\n            \"evidence\": \"cfmeqjczytlntcijxgwrzqwxsvwqrmvcmtimsixo-a.png\",\n            \"submitted_at\": \"2024-07-13T21:56:39.010898+07:00\",\n            \"updated_at\": \"2024-07-13T21:56:45.790484+07:00\"\n        },\n        {\n            \"submission_id\": \"GJCTE\",\n            \"user\": {\n                \"npm\": \"2125240015\",\n                \"name\": \"Fanes Pratama\",\n                \"email\": \"fanes23.pratama@mhs.mdp.ac.id\",\n                \"kas_payed\": 10001\n            },\n            \"payed_amount\": 10000,\n            \"status\": {\n                \"ID\": 3,\n                \"Name\": \"Pending\"\n            },\n            \"note\": \"-\",\n            \"evidence\": \"cfmeqjczytlntcijxgwrzqwxsvwqrmvcmtimsixo-a.png\",\n            \"submitted_at\": \"2024-07-13T22:10:40.116905+07:00\",\n            \"updated_at\": \"2024-07-13T22:10:40.116905+07:00\"\n        }\n    ],\n    \"pagination\": {\n        \"page\": 1,\n        \"limit\": 10,\n        \"total_items\": 5,\n        \"total_pages\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"submission_id\": \"12345\"\r\n    // \"SubmissionId\": \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/v1/kas-submissions/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"kas-submissions",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "LFUDK"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"submission_id\": \"12345\"\r\n    // \"SubmissionId\": \"12345\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/v1/kas-submissions/:id",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"kas-submissions",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "LFUDK"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 14:58:56 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "444"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"status_code\": 200,\n    \"message\": \"Success getting kas submission\",\n    \"data\": {\n        \"submission_id\": \"LFUDK\",\n        \"user\": {\n            \"npm\": \"2125240015\",\n            \"name\": \"Fanes Pratama\",\n            \"email\": \"fanes23.pratama@mhs.mdp.ac.id\",\n            \"kas_payed\": 10001\n        },\n        \"payed_amount\": 10000,\n        \"status\": {\n            \"ID\": 2,\n            \"Name\": \"Rejected\"\n        },\n        \"note\": \"-\",\n        \"evidence\": \"cfmeqjczytlntcijxgwrzqwxsvwqrmvcmtimsixo-a.png\",\n        \"submitted_at\": \"2024-07-13T21:55:16.069561+07:00\",\n        \"updated_at\": \"2024-07-13T21:56:25.853805+07:00\"\n    }\n}"
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"submission_id\": \"12345\"\r\n    // \"SubmissionId\": \"12345\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/v1/kas-submissions/:id",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"kas-submissions",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "LFUDX"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 14:59:14 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "85"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"status_code\": 404,\n    \"message\": \"Kas submission not found\",\n    \"errors\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\": {\r\n        \"npm\": \"2125240015\"\r\n    },\r\n    \"payed_amount\": 10000,\r\n    \"note\": \"-\",\r\n    \"evidence\": \"cfmeqjczytlntcijxgwrzqwxsvwqrmvcmtimsixo-a.png\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/v1/kas-submissions",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"kas-submissions"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user\": {\r\n        \"npm\": \"2125240015\"\r\n    },\r\n    \"payed_amount\": 10000,\r\n    \"note\": \"-\",\r\n    \"evidence\": \"cfmeqjczytlntcijxgwrzqwxsvwqrmvcmtimsixo-a.png\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/v1/kas-submissions",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"kas-submissions"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 14:32:39 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "440"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"status_code\": 201,\n    \"message\": \"Success creating kas submission\",\n    \"data\": {\n        \"submission_id\": \"OPXWY\",\n        \"user\": {\n            \"npm\": \"2125240015\",\n            \"name\": \"Fanes Pratama\",\n            \"email\": \"fanes23.pratama@mhs.mdp.ac.id\",\n            \"kas_payed\": 1\n        },\n        \"payed_amount\": 10000,\n        \"status\": {\n            \"ID\": 3,\n            \"Name\": \"Pending\"\n        },\n        \"note\": \"-\",\n        \"evidence\": \"cfmeqjczytlntcijxgwrzqwxsvwqrmvcmtimsixo-a.png\",\n        \"submitted_at\": \"2024-07-13T21:32:39.582974+07:00\",\n        \"updated_at\": \"2024-07-13T21:32:39.582974+07:00\"\n    }\n}"
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user\": {\r\n        \"npm\": \"2125240021\"\r\n    },\r\n    \"payed_amount\": 10000,\r\n    \"note\": \"-\",\r\n    \"evidence\": \"cfmeqjczytlntcijxgwrzqwxsvwqrmvcmtimsixo-a.png\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/v1/kas-submissions",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"kas-submissions"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 14:30:21 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "75"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"status_code\": 400,\n    \"message\": \"User not found\",\n    \"errors\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Status",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": {\r\n        \"id\": 1 // 1 = approved | 2 = rejected | 3 = pending\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/v1/kas-submissions/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"kas-submissions",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "KRRWL"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\": {\r\n        \"id\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/v1/kas-submissions/:id",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"kas-submissions",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "BSSYB"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 14:52:44 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "441"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"status_code\": 200,\n    \"message\": \"Success updating kas submission\",\n    \"data\": {\n        \"submission_id\": \"BSSYB\",\n        \"user\": {\n            \"npm\": \"2125240015\",\n            \"name\": \"Fanes Pratama\",\n            \"email\": \"fanes23.pratama@mhs.mdp.ac.id\",\n            \"kas_payed\": 1\n        },\n        \"payed_amount\": 10000,\n        \"status\": {\n            \"ID\": 1,\n            \"Name\": \"Approved\"\n        },\n        \"note\": \"-\",\n        \"evidence\": \"cfmeqjczytlntcijxgwrzqwxsvwqrmvcmtimsixo-a.png\",\n        \"submitted_at\": \"2024-07-13T21:47:47.782625+07:00\",\n        \"updated_at\": \"2024-07-13T21:52:44.671557+07:00\"\n    }\n}"
+						},
+						{
+							"name": "Invalid Status",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\": {\r\n        \"id\": 4\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/v1/kas-submissions/:id",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"kas-submissions",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "LFUDK"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 14:55:30 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "88"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"status_code\": 400,\n    \"message\": \"Payment status is not valid\",\n    \"errors\": null\n}"
+						},
+						{
+							"name": "Update to Pending",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\": {\r\n        \"id\": 3\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/v1/kas-submissions/:id",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"kas-submissions",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "LFUDK"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 14:55:41 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "94"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"status_code\": 400,\n    \"message\": \"Kas submission already in pending\",\n    \"errors\": null\n}"
+						},
+						{
+							"name": "Already Processed",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\": {\r\n        \"id\": 1\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/v1/kas-submissions/:id",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"kas-submissions",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "BSSYB"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 14:54:57 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "93"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"status_code\": 400,\n    \"message\": \"Kas submission already processed\",\n    \"errors\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Financial Request",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/v1/financial-request",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"financial-request"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "3",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "order_by",
+									"value": "asc",
+									"description": "asc|desc",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "name",
+									"description": "created_at|updated_at",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"description": "1 = approved|2 = rejected|3 = pending",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/v1/financial-request",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"financial-request"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "3",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "order_by",
+											"value": "asc",
+											"description": "asc|desc",
+											"disabled": true
+										},
+										{
+											"key": "sort",
+											"value": "name",
+											"description": "created_at|updated_at|name",
+											"disabled": true
+										},
+										{
+											"key": "name",
+											"value": "fanes",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 09:15:34 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "909"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"status_code\": 200,\n    \"message\": \"Success getting financial requests\",\n    \"data\": [\n        {\n            \"request_id\": \"RPOND\",\n            \"amount\": 2000,\n            \"note\": \"beli pena\",\n            \"user\": {\n                \"npm\": \"2125240015\",\n                \"name\": \"Fanes Pratama\",\n                \"email\": \"fanes23.pratama@mhs.mdp.ac.id\"\n            },\n            \"status\": \"Pending\",\n            \"payment\": {\n                \"type\": \"transfer\",\n                \"target_provider\": \"BCA\",\n                \"target_name\": \"Fanes Pratama\",\n                \"target_number\": \"12345678\",\n                \"evidence\": \"evidence.png\"\n            },\n            \"transfered_evidence\": \"\",\n            \"created_at\": \"2024-07-13T16:09:38.813962+07:00\"\n        },\n        {\n            \"request_id\": \"KTLLZ\",\n            \"amount\": 7000,\n            \"note\": \"beli minum\",\n            \"user\": {\n                \"npm\": \"2125240015\",\n                \"name\": \"Fanes Pratama\",\n                \"email\": \"fanes23.pratama@mhs.mdp.ac.id\"\n            },\n            \"status\": \"Pending\",\n            \"payment\": {\n                \"type\": \"transfer\",\n                \"target_provider\": \"BCA\",\n                \"target_name\": \"Fanes Pratama\",\n                \"target_number\": \"12345678\",\n                \"evidence\": \"evidence.png\"\n            },\n            \"transfered_evidence\": \"\",\n            \"created_at\": \"2024-07-13T16:10:07.137238+07:00\"\n        }\n    ],\n    \"pagination\": {\n        \"page\": 1,\n        \"limit\": 10,\n        \"total_items\": 2,\n        \"total_pages\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/v1/financial-request/:request_id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"financial-request",
+								":request_id"
+							],
+							"variable": [
+								{
+									"key": "request_id",
+									"value": "RPOND"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/v1/financial-request/:request_id",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"financial-request",
+										":request_id"
+									],
+									"variable": [
+										{
+											"key": "request_id",
+											"value": "RPOND"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 09:10:43 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "462"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"status_code\": 200,\n    \"message\": \"Success getting financial request\",\n    \"data\": {\n        \"request_id\": \"RPOND\",\n        \"amount\": 2000,\n        \"note\": \"beli pena\",\n        \"user\": {\n            \"npm\": \"2125240015\",\n            \"name\": \"Fanes Pratama\",\n            \"email\": \"fanes23.pratama@mhs.mdp.ac.id\"\n        },\n        \"status\": \"Pending\",\n        \"payment\": {\n            \"type\": \"transfer\",\n            \"target_provider\": \"BCA\",\n            \"target_name\": \"Fanes Pratama\",\n            \"target_number\": \"12345678\",\n            \"evidence\": \"evidence.png\"\n        },\n        \"transfered_evidence\": \"\",\n        \"created_at\": \"2024-07-13T16:09:38.813962+07:00\"\n    }\n}"
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/v1/financial-request/:request_id",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"financial-request",
+										":request_id"
+									],
+									"variable": [
+										{
+											"key": "request_id",
+											"value": "RPONX"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 09:15:03 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "88"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"status_code\": 404,\n    \"message\": \"Financial request not found\",\n    \"errors\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 7000,\r\n    \"note\": \"beli minum\",\r\n    \"user\": {\r\n        \"npm\": \"2125240015\"\r\n    },\r\n    \"payment\": {\r\n        \"type\": {\r\n            \"id\": 1 // 1 = transfer | 2 = cash | 3 = other\r\n        },\r\n        \"target_provider\": \"BCA\",\r\n        \"target_name\": \"Fanes Pratama\",\r\n        \"target_number\": \"12345678\",\r\n        \"evidence\": \"evidence.png\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/v1/financial-request",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"financial-request"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"amount\": 7000,\r\n    \"note\": \"beli minum\",\r\n    \"user\": {\r\n        \"npm\": \"2125240015\"\r\n    },\r\n    \"payment\": {\r\n        \"type\": {\r\n            \"id\": 1 // 1 = transfer | 2 = cash | 3 = other\r\n        },\r\n        \"target_provider\": \"BCA\",\r\n        \"target_name\": \"Fanes Pratama\",\r\n        \"target_number\": \"12345678\",\r\n        \"evidence\": \"evidence.png\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/v1/financial-request",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"financial-request"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 12:46:58 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "496"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"status_code\": 201,\n    \"message\": \"Success creating financial request\",\n    \"data\": {\n        \"request_id\": \"EQZNI\",\n        \"amount\": 7000,\n        \"note\": \"beli minum\",\n        \"user\": {\n            \"npm\": \"2125240015\",\n            \"name\": \"Fanes Pratama\",\n            \"email\": \"fanes23.pratama@mhs.mdp.ac.id\"\n        },\n        \"payment\": {\n            \"status\": {\n                \"ID\": 3,\n                \"Name\": \"Pending\"\n            },\n            \"type\": {\n                \"ID\": 1,\n                \"Name\": \"Transfer\"\n            },\n            \"target_provider\": \"BCA\",\n            \"target_name\": \"Fanes Pratama\",\n            \"target_number\": \"12345678\",\n            \"evidence\": \"evidence.png\"\n        },\n        \"transfered_evidence\": \"\",\n        \"created_at\": \"2024-07-13T19:46:58.086724+07:00\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Status",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": {\r\n        \"id\": 1 // 1 = approved | 2 = rejected | 3 = pending\r\n    },\r\n    \"transfered_evidence\": \"transfered_evidence.png\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/v1/financial-request/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"financial-request",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "RCENL"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\": {\r\n        \"id\": 1\r\n    },\r\n    \"transfered_evidence\": \"transfered_evidence.png\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/v1/financial-request/:id",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"financial-request",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "OJWLQ"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 13:09:56 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "526"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"status_code\": 200,\n    \"message\": \"Success updating financial request status\",\n    \"data\": {\n        \"request_id\": \"OJWLQ\",\n        \"amount\": 7000,\n        \"note\": \"beli minum\",\n        \"user\": {\n            \"npm\": \"2125240015\",\n            \"name\": \"Fanes Pratama\",\n            \"email\": \"fanes23.pratama@mhs.mdp.ac.id\"\n        },\n        \"payment\": {\n            \"status\": {\n                \"ID\": 1,\n                \"Name\": \"Approved\"\n            },\n            \"type\": {\n                \"ID\": 1,\n                \"Name\": \"Transfer\"\n            },\n            \"target_provider\": \"BCA\",\n            \"target_name\": \"Fanes Pratama\",\n            \"target_number\": \"12345678\",\n            \"evidence\": \"evidence.png\"\n        },\n        \"transfered_evidence\": \"transfered_evidence.png\",\n        \"created_at\": \"2024-07-13T20:08:46.11243+07:00\"\n    }\n}"
+						},
+						{
+							"name": "Invalid Status",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\": {\r\n        \"id\": 4\r\n    },\r\n    \"transfered_evidence\": \"transfered_evidence.png\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/v1/financial-request/:request_id",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"financial-request",
+										":request_id"
+									],
+									"variable": [
+										{
+											"key": "request_id",
+											"value": "YEQHL"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 12:33:53 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "88"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"status_code\": 400,\n    \"message\": \"Payment status is not valid\",\n    \"errors\": null\n}"
+						},
+						{
+							"name": "Update to Pending",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\": {\r\n        \"id\": 3\r\n    },\r\n    \"transfered_evidence\": \"transfered_evidence.png\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/v1/financial-request/:id",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"financial-request",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "OJWLQ"
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 13:08:53 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "97"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"status_code\": 403,\n    \"message\": \"Financial request already in pending\",\n    \"errors\": null\n}"
+						},
+						{
+							"name": "Already Processed",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\": {\r\n        \"id\": 1\r\n    },\r\n    \"transfered_evidence\": \"transfered_evidence.png\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/v1/financial-request/:id",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"financial-request",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "OJWLQ"
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 Jul 2024 13:10:09 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "96"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"status_code\": 403,\n    \"message\": \"Financial request already processed\",\n    \"errors\": null\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
