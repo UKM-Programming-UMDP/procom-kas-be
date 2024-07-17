@@ -9,7 +9,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-const REQUEST_LIMIT = 10
+const REQUEST_LIMIT = 50
 const LIMIT_INTERVAL = time.Second * 5
 
 func rateLimiterConfig() gin.HandlerFunc {
