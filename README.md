@@ -19,31 +19,38 @@ go mod tidy
 ### Database
 
 This project using PostgreSQL as database. There is two options for you to host it:
+
 1. Using docker, simply host it by download an official postgres image, and run it. But the mines is it consume a lot of RAM (you need at least 16 GB of RAM)
 2. Using WSL2, this is quite complicate for the setup, but it's cost a lot less ram (you can run in on laptop with 8 GB RAM). Google for tutorial, or contact backend developer.
 3. (Recomended) Using hosted database, the most simple way, but shared.
 
 #### Step by Step using hosted database
+
 1. Download & Install [Cloudflared for windows](https://github.com/cloudflare/cloudflared/releases/download/2024.6.1/cloudflared-windows-386.msi).
 2. Open new CMD and run `cloudflared access tcp --hostname dbclone.fanesp.online --url 127.0.0.1:5432`
 3. Download database software such as TablePlus.
 4. Ask backend developer for database access.
 
 #### Step by Step Using WSL2
+
 1. Install Ubuntu to your wsl
+
 ```bash
 wsl --install
 wsl --set-default Ubuntu
 ```
+
 Note: after install, you need to input username and password, that's for root user of your linux
 
 2. Install postgresql
+
 ```bash
 sudo apt update
 sudo apt install postgresql postgresql-contrib
 ```
 
 3. Start postgresql
+
 ```bash
 sudo systemctl status postgresql
 sudo systemctl start postgresql
@@ -51,11 +58,14 @@ sudo systemctl start postgresql
 ```
 
 4. Create postgres user
+
 ```bash
 sudo -u postgres psql
 ALTER USER postgres PASSWORD 'secret';
 CREATE DATABASE procom_kas;
+GRANT CREATE ON DATABASE procom_kas TO postgres;
 ```
+
 Note: replace 'secret' with your preferences, this will be put to your .env
 
 5. Update Your .env files with username and password that you create, since the username is 'postgres', you only need update the password
@@ -98,6 +108,7 @@ After making modifications, make sure you can run it on your local. Pay attentio
 ```bash
 go run main.go
 ```
+
 Or you can use `make dev` command if you install makefile software.
 
 ---

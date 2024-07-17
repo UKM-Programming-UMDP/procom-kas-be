@@ -5,12 +5,15 @@ import (
 	"backend/app/common/consts"
 	"backend/app/common/models"
 	"time"
+
+	"gorm.io/gorm"
 )
 
 type Balance struct {
 	ID      int `gorm:"primaryKey;autoIncrement" json:"id" validate:"required"`
 	Balance int `gorm:"not null"`
 	models.Timestamps
+	DeletedAt gorm.DeletedAt `gorm:"index"`
 }
 
 type BalanceHistory struct {

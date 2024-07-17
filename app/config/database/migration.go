@@ -28,6 +28,18 @@ var modelList = []interface{}{
 }
 
 func Migrate(db *gorm.DB) error {
+	var schemaName string
+	err := db.Raw("SELECT schema_name FROM information_schema.schemata WHERE schema_name = 'development'").Scan(&schemaName).Error
+	if err != nil {
+		panic(err)
+	}
+
+	if schemaName == "" {
+		if err := db.Exec("CREATE SCHEMA development").Error; err != nil {
+			panic(err)
+		}
+	}
+
 	for _, model := range modelList {
 		if err := db.AutoMigrate(model); err != nil {
 			panic(err)
