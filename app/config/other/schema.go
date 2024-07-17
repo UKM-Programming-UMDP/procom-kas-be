@@ -7,11 +7,11 @@ import (
 )
 
 func InitDatabaseSchema(db *gorm.DB) {
-	CreateSchema(db, "development")
-	CreateSchema(db, "production")
+	createSchema(db, "development")
+	createSchema(db, "production")
 }
 
-func CreateSchema(db *gorm.DB, schemaName string) error {
+func createSchema(db *gorm.DB, schemaName string) error {
 	var existingSchemaName string
 	checkQuery := "SELECT schema_name FROM information_schema.schemata WHERE schema_name = ?"
 	if err := db.Raw(checkQuery, schemaName).Scan(&existingSchemaName).Error; err != nil {
