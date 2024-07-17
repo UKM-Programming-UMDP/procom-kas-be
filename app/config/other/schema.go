@@ -23,10 +23,12 @@ func CreateSchema(db *gorm.DB, schemaName string) error {
 	}
 
 	if existingSchemaName == "" {
+		fmt.Printf("===== Initialize %s Schema =====\n", schemaName)
 		createSchemaQuery := "CREATE SCHEMA " + schemaName
 		if err := db.Exec(createSchemaQuery).Error; err != nil {
 			return err
 		}
+		fmt.Printf("Schema %s created\n", schemaName)
 	}
 
 	return nil
