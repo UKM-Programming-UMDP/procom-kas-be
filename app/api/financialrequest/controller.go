@@ -10,7 +10,7 @@ import (
 func Controller(router *gin.Engine, db *gorm.DB) {
 	v1 := router.Group("/v1")
 
-	v1.GET("/financial-request", func(c *gin.Context) {
+	v1.GET("/financial-requests", func(c *gin.Context) {
 		var filters finreqFilters
 		if err := validator.BindParams(c, &filters); err {
 			return
@@ -19,7 +19,7 @@ func Controller(router *gin.Engine, db *gorm.DB) {
 		GetFinancialRequests(db, c, &filters)
 	})
 
-	v1.GET("/financial-request/:id", func(c *gin.Context) {
+	v1.GET("/financial-requests/:id", func(c *gin.Context) {
 		var reqUri FinancialRequestGetByID
 		if err := validator.BindUri(c, &reqUri); err {
 			return
@@ -28,7 +28,7 @@ func Controller(router *gin.Engine, db *gorm.DB) {
 		GetFinancialRequestByID(db, c, reqUri)
 	})
 
-	v1.POST("/financial-request", func(c *gin.Context) {
+	v1.POST("/financial-requests", func(c *gin.Context) {
 		var reqBody FinancialRequestCreate
 		if err := validator.BindBody(c, &reqBody); err {
 			return
@@ -37,7 +37,7 @@ func Controller(router *gin.Engine, db *gorm.DB) {
 		CreateFinancialRequest(db, c, &reqBody)
 	})
 
-	v1.PUT("/financial-request/:id", func(c *gin.Context) {
+	v1.PUT("/financial-requests/:id", func(c *gin.Context) {
 		var reqUri FinancialRequestGetByID
 		if err := validator.BindUri(c, &reqUri); err {
 			return
