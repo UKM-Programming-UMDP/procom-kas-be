@@ -1,11 +1,16 @@
 package enums
 
+import "backend/app/common/models"
+
 type PaymentStatus struct {
-	ID   int    `gorm:"primaryKey;not null;autoIncrement" validate:"required"`
-	Name string `gorm:"not null;size:50"`
+	models.Enums
 }
 
 type PaymentType struct {
-	ID   int    `gorm:"primaryKey;not null;autoIncrement" validate:"required"`
-	Name string `gorm:"not null;size:50"`
+	models.Enums
+}
+
+type EnumsResponse struct {
+	ID   int    `json:"id"`
+	Name string `json:"name"`
 }

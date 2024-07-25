@@ -61,9 +61,7 @@ func CreateKasSubmission(db *gorm.DB, c *gin.Context, reqBody *KasSubmissionCrea
 	var kasSubmission KasSubmission
 	kasSubmission.SubmissionID = utils.GenerateRandomCapitalString(5)
 	kasSubmission.UserID = userID
-	kasSubmission.Status = enums.PaymentStatus{
-		ID: consts.Pending,
-	}
+	kasSubmission.StatusID = consts.Pending
 	kasSubmission.PayedAmount = *reqBody.PayedAmount
 	kasSubmission.Note = reqBody.Note
 	kasSubmission.Evidence = reqBody.Evidence
