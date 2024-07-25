@@ -2,6 +2,7 @@ package router
 
 import (
 	"backend/app/api/balance"
+	"backend/app/api/enums"
 	"backend/app/api/fileupload"
 	"backend/app/api/financialrequest"
 	"backend/app/api/kassubmission"
@@ -39,4 +40,5 @@ func InitializeRoutes() {
 	financialrequest.Controller(router, db)
 	kassubmission.Controller(router, db)
 	fileupload.Controller(router, db)
+	enums.Controller(router, db)
 }
