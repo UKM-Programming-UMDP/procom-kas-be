@@ -22,5 +22,12 @@ func Build(c *gin.Context, query *gorm.DB, filter *DateFilter) {
 		return
 	}
 
-	query.Order(fmt.Sprintf("%s %s", filter.Sort, filter.OrderBy))
+	var reversedOrderBy consts.OrderBy
+	if filter.OrderBy == consts.ASC {
+		reversedOrderBy = consts.DESC
+	} else {
+		reversedOrderBy = consts.ASC
+	}
+
+	query.Order(fmt.Sprintf("%s %s", filter.Sort, reversedOrderBy))
 }
