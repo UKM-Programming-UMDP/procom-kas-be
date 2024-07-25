@@ -65,6 +65,6 @@ type FinancialRequestResponse struct {
 		TargetNumber   string              `json:"target_number,omitempty"`
 		Evidence       string              `json:"evidence,omitempty"`
 	} `json:"payment,omitempty"`
-	TransferedEvidence string    `json:"transfered_evidence,omitempty"`
+	TransferedEvidence string    `json:"transfered_evidence"`
 	CreatedAt          time.Time `json:"created_at,omitempty"`
 }
