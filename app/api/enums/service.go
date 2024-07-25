@@ -27,7 +27,7 @@ func GetEnums(db *gorm.DB, c *gin.Context, tableName string) {
 	}
 
 	var response interface{} = result
-	handler.Success(c, http.StatusAccepted, "Enums retrieved successfully", &response)
+	handler.Success(c, http.StatusOK, "Enums retrieved successfully", &response)
 }
 
 func IsPaymentStatusValid(db *gorm.DB, c *gin.Context, statusID int, isHandleReturn bool) (err bool, val bool) {
