@@ -2820,13 +2820,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseURL}}/v1/financial-request",
+							"raw": "{{baseURL}}/v1/financial-requests",
 							"host": [
 								"{{baseURL}}"
 							],
 							"path": [
 								"v1",
-								"financial-request"
+								"financial-requests"
 							],
 							"query": [
 								{
@@ -2867,13 +2867,13 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{baseURL}}/v1/financial-request",
+									"raw": "{{baseURL}}/v1/financial-requests",
 									"host": [
 										"{{baseURL}}"
 									],
 									"path": [
 										"v1",
-										"financial-request"
+										"financial-requests"
 									],
 									"query": [
 										{
@@ -2938,13 +2938,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseURL}}/v1/financial-request/:request_id",
+							"raw": "{{baseURL}}/v1/financial-requests/:request_id",
 							"host": [
 								"{{baseURL}}"
 							],
 							"path": [
 								"v1",
-								"financial-request",
+								"financial-requests",
 								":request_id"
 							],
 							"variable": [
@@ -2962,13 +2962,13 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{baseURL}}/v1/financial-request/:request_id",
+									"raw": "{{baseURL}}/v1/financial-requests/:request_id",
 									"host": [
 										"{{baseURL}}"
 									],
 									"path": [
 										"v1",
-										"financial-request",
+										"financial-requests",
 										":request_id"
 									],
 									"variable": [
@@ -3009,13 +3009,13 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{baseURL}}/v1/financial-request/:request_id",
+									"raw": "{{baseURL}}/v1/financial-requests/:request_id",
 									"host": [
 										"{{baseURL}}"
 									],
 									"path": [
 										"v1",
-										"financial-request",
+										"financial-requests",
 										":request_id"
 									],
 									"variable": [
@@ -3067,13 +3067,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseURL}}/v1/financial-request",
+							"raw": "{{baseURL}}/v1/financial-requests",
 							"host": [
 								"{{baseURL}}"
 							],
 							"path": [
 								"v1",
-								"financial-request"
+								"financial-requests"
 							]
 						}
 					},
@@ -3093,13 +3093,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseURL}}/v1/financial-request",
+									"raw": "{{baseURL}}/v1/financial-requests",
 									"host": [
 										"{{baseURL}}"
 									],
 									"path": [
 										"v1",
-										"financial-request"
+										"financial-requests"
 									]
 								}
 							},
@@ -3144,13 +3144,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseURL}}/v1/financial-request/:id",
+							"raw": "{{baseURL}}/v1/financial-requests/:id",
 							"host": [
 								"{{baseURL}}"
 							],
 							"path": [
 								"v1",
-								"financial-request",
+								"financial-requests",
 								":id"
 							],
 							"variable": [
@@ -3177,13 +3177,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseURL}}/v1/financial-request/:id",
+									"raw": "{{baseURL}}/v1/financial-requests/:id",
 									"host": [
 										"{{baseURL}}"
 									],
 									"path": [
 										"v1",
-										"financial-request",
+										"financial-requests",
 										":id"
 									],
 									"variable": [
@@ -3233,13 +3233,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseURL}}/v1/financial-request/:request_id",
+									"raw": "{{baseURL}}/v1/financial-requests/:request_id",
 									"host": [
 										"{{baseURL}}"
 									],
 									"path": [
 										"v1",
-										"financial-request",
+										"financial-requests",
 										":request_id"
 									],
 									"variable": [
@@ -3289,13 +3289,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseURL}}/v1/financial-request/:id",
+									"raw": "{{baseURL}}/v1/financial-requests/:id",
 									"host": [
 										"{{baseURL}}"
 									],
 									"path": [
 										"v1",
-										"financial-request",
+										"financial-requests",
 										":id"
 									],
 									"variable": [
@@ -3345,13 +3345,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseURL}}/v1/financial-request/:id",
+									"raw": "{{baseURL}}/v1/financial-requests/:id",
 									"host": [
 										"{{baseURL}}"
 									],
 									"path": [
 										"v1",
-										"financial-request",
+										"financial-requests",
 										":id"
 									],
 									"variable": [
@@ -3385,6 +3385,133 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"status\": false,\n    \"status_code\": 403,\n    \"message\": \"Financial request already processed\",\n    \"errors\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Enums",
+			"item": [
+				{
+					"name": "Payment Status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/v1/enums/payment-status",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"enums",
+								"payment-status"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/v1/enums/payment-status",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"enums",
+										"payment-status"
+									]
+								}
+							},
+							"status": "Accepted",
+							"code": 202,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 25 Jul 2024 04:39:36 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "163"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"status_code\": 202,\n    \"message\": \"Enums retrieved successfully\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Approved\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Rejected\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Pending\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Payment Type",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/v1/enums/payment-type",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"v1",
+								"enums",
+								"payment-type"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/v1/enums/payment-type",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"v1",
+										"enums",
+										"payment-type"
+									]
+								}
+							},
+							"status": "Accepted",
+							"code": 202,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 25 Jul 2024 04:39:17 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "157"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"status_code\": 202,\n    \"message\": \"Enums retrieved successfully\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Transfer\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Cash\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Other\"\n        }\n    ]\n}"
 						}
 					]
 				}

@@ -1,13 +1,34 @@
 package enums
 
 import (
+	"backend/app/common/models"
+	"backend/app/common/utils"
 	"backend/app/pkg/handler"
 	"backend/app/pkg/validator"
+	"fmt"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"
 )
+
+func GetEnums(db *gorm.DB, c *gin.Context, tableName string) {
+	var enums []models.Enums
+	table := fmt.Sprintf("%s.%s", utils.GetEnv("environment"), tableName)
+	query := db.Table(table).Find(&enums)
+	val, _ := validator.Query(query, c, false)
+	if !val {
+		return
+	}
+
+	result := make([]*EnumsResponse, len(enums))
+	for i, enum := range enums {
+		result[i] = enumResponseFormatter(&enum)
+	}
+
+	var response interface{} = result
+	handler.Success(c, http.StatusOK, "Enums retrieved successfully", &response)
+}
 
 func IsPaymentStatusValid(db *gorm.DB, c *gin.Context, statusID int, isHandleReturn bool) (err bool, val bool) {
 	query := db.Model(PaymentStatus{}).Where("id = ?", statusID)

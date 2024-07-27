@@ -68,9 +68,7 @@ func CreateFinancialRequest(db *gorm.DB, c *gin.Context, reqBody *FinancialReque
 	finReq.Note = reqBody.Note
 	finReq.UserID = userID
 	finReq.Payment = Payment{
-		Status: enums.PaymentStatus{
-			ID: consts.Pending,
-		},
+		StatusID:       consts.Pending,
 		Type:           reqBody.Payment.Type,
 		TargetProvider: reqBody.Payment.TargetProvider,
 		TargetName:     reqBody.Payment.TargetName,
